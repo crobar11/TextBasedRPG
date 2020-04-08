@@ -9,5 +9,5 @@
  * @author croba
  */
 public class Class {
-    
+    //bing bong bing bong ding dong ding dong
 }
