@@ -1,13 +1,38 @@
+
+import java.util.ArrayList;
+
 public class Player
 {
     int currentHealth;
     int maxHealth;
+    int speed;
+    int strength;
+    ArrayList<Item> inventory;
     
     
     public Player()
     {
         maxHealth = 5;
         currentHealth = 5;
+        speed = 1;
+        strength = 1;
+        inventory = new ArrayList<Item>();
+    }
+    
+    public int addItem(Item i)//0 means duplicate, 1 means successful
+    {
+        if(inventory.contains(i))
+            return 0;
+        else
+        {
+            inventory.add(i);
+            return 1;
+        }
+    }
+    
+    public boolean isInventoryEmpty()
+    {
+        return inventory.isEmpty();
     }
     
     public void setHealth(int h)
@@ -50,6 +75,26 @@ public class Player
     public int getMaxHealth()
     {
         return maxHealth;
+    }
+    
+    public int getSpeed()
+    {
+        return speed;
+    }
+    
+    public int getStrength()
+    {
+        return strength;
+    }
+    
+    public void setSpeed(int s)
+    {
+        speed = s;
+    }
+    
+    public void setStrength(int s)
+    {
+        strength = s;
     }
     
     public String toString()
