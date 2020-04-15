@@ -1,22 +1,34 @@
-public class Potion implements Item
+
+import java.util.ArrayList;
+
+public class Potion
 {
-    public String name;
-    public int heal;
+    private String name;
+    private int heal, strength, speed;
+    private ArrayList potions;
     
-    public Potion(String n, int h)
+    public Potion(String n, int h, int s, int sp)
     {
         name = n;
         heal = h;
+        strength = s;
+        speed = s;
+        
     }
     
-    public void use()
+    public int getStrength()
     {
-        //heal character
+        return strength;
     }
     
     public int getHeal()
     {
         return heal;
+    }
+    
+    public int getSpeed()
+    {
+        return speed;
     }
     
     public String getName()

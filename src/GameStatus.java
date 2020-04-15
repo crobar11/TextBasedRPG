@@ -1,35 +1,20 @@
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class GameStatus<Encounter> 
+public class GameStatus
 {
-    private BinaryTree tree;
-    ArrayList MonsterList;
-    Node currentNode;
-    
-    public GameStatus()
+    public static void main(String [] args)
     {
-        MonsterList = new ArrayList();
-        MonsterList.add("Ogre");
-        MonsterList.add("Bat");
-        MonsterList.add("Vampire");
-        MonsterList.add("Werewolf");
-        MonsterList.add("Zombie");
-        MonsterList.add("Bear");
-        MonsterList.add("Giant Bug");
-        MonsterList.add("Giant");
-        MonsterList.add("Bandit");
-        MonsterList.add("Venus Fly Trap");
-        MonsterList.add("Slime");
-        MonsterList.add("Skeleton");
-        MonsterList.add("Giant Eyeball");
-        MonsterList.add("Witch");
-        MonsterList.add("Troll");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome Adventurer, To TextQuest! \n Would You Like To Begin Your Quest? \n Type: \"Yes\" to continue");
+        String name = sc.nextLine();
+        if(name.equals("Yes") || name.equals("yes"))
+        {
+            System.out.println("SICK");
+        }
         
-    }
-    
-    public static void main(int [] args)
-    {
+        
         
     }
 }
