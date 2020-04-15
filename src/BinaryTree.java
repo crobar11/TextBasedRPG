@@ -3,38 +3,38 @@ import java.util.ArrayList;
 
 public class BinaryTree 
 {
-    private final static class Node
+    private final static class Encounter
     {
-    Node parent;
-    Node leftChild;
-    Node rightChild;
+    Encounter parent;
+    Encounter leftChild;
+    Encounter rightChild;
     int element;
     
-    public Node(int elem)
+    public Encounter(int elem)
     {
         parent =  null;
         leftChild = null;
         rightChild = null;
         this.element = elem;
     }
-    public Node(Node parent)
+    public Encounter(Encounter parent)
     {
         this.parent = parent;
     }
     
-    public void setParent(Node node)
+    public void setParent(Encounter e)
     {
-        this.parent = node;
+        this.parent = e;
     }
     
-    public void setLeftChild(Node node)
+    public void setLeftChild(Encounter e)
     {
-        this.leftChild = node;
+        this.leftChild = e;
     }
     
-    public void setRightChild(Node node)
+    public void setRightChild(Encounter e)
     {
-        this.rightChild = node;
+        this.rightChild = e;
     }
     
     public void setElement(int elem)
@@ -42,7 +42,7 @@ public class BinaryTree
         this.element = elem;
     }
     
-    public Node getParent()
+    public Encounter getParent()
     {
         return this.parent;
     }
@@ -52,12 +52,12 @@ public class BinaryTree
         return this.element;
     }
     
-    public Node getLeftChild()
+    public Encounter getLeftChild()
     {
         return leftChild;
     }
     
-    public Node getRightChild()
+    public Encounter getRightChild()
     {
         return rightChild;
     }
@@ -70,26 +70,26 @@ public class BinaryTree
     }
     }
     
-    private Node root;
+    private Encounter root;
     private int size;
     public BinaryTree()
     {
         root = null;
     }
-    public void addLeft( int element, Node n )
+    public void addLeft( int element, Encounter n )
     {
-        Node noob = new Node(element);
+        Encounter noob = new Encounter(element);
         n.setLeftChild(noob);
         noob.setParent(n);
     }
-    public void addRight(int element, Node n)
+    public void addRight(int element, Encounter n)
     {
-        Node noob = new Node(element);
+        Encounter noob = new Encounter(element);
         noob.setParent(n);
         n.setRightChild(noob);
     }
     
-    public int depth(Node e)
+    public int depth(Encounter e)
     {
         if(e.getParent() != null)
         return 1 + depth(e.getParent());
@@ -97,33 +97,33 @@ public class BinaryTree
         return 0;
     }
     
-    public boolean isInternal(Node node)
+    public boolean isInternal(Encounter e)
     {
-        if(node.isExternal() == false)
+        if(e.isExternal() == false)
         return true;
         return false;
     }
     
-    public boolean isExternal(Node node)
+    public boolean isExternal(Encounter e)
     {
-        return node.isExternal();
+        return e.isExternal();
     }
     
     public int size()
     {return size;}
     
-    public boolean isRoot(Node node)
+    public boolean isRoot(Encounter e)
     {
-        if(node.getParent() == null)
+        if(e.getParent() == null)
         return true;
         return false;
     }
-    public int getElement(Node node)
-    {return node.getElement();}
+    public int getElement(Encounter e)
+    {return e.getElement();}
     
-    public Node parent(Node node)
-    {return node.getParent();}
+    public Encounter parent(Encounter e)
+    {return e.getParent();}
     
-    public Node root()
+    public Encounter root()
     {return root;}
 }
