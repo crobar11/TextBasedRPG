@@ -10,6 +10,11 @@ public class Player
         currentHealth = 5;
     }
     
+    public void setHealth(int h)
+    {
+        currentHealth = h;
+    }
+    
     public int decrementHealth() //0 means player is dead, 1 means they successfully lost health
     {
         if(currentHealth == 1)
