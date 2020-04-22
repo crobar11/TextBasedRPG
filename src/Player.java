@@ -37,7 +37,7 @@ public class Player
         currentHealth-=x;
     }
     
-    public int incrementHealth(int x)
+    public void incrementHealth(int x)
     {
         currentHealth+=x;
     }
