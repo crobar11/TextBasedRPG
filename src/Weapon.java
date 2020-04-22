@@ -21,6 +21,7 @@ public class Weapon extends Item
         return strength;
     }
     
+    
     public String getName()
     {
         return name;
@@ -28,6 +29,6 @@ public class Weapon extends Item
     
     public String getValue()
     {
-        return "weapon";
+        return "Weapon";
     }
 }
