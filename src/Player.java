@@ -5,7 +5,6 @@ public class Player
 {
     int currentHealth;
     int maxHealth;
-    int speed;
     int strength;
     ArrayList<Item> inventory;
     
@@ -13,21 +12,14 @@ public class Player
     public Player()
     {
         maxHealth = 5;
-        currentHealth = 5;
-        speed = 1;
+        currentHealth = maxHealth;
         strength = 1;
         inventory = new ArrayList<Item>();
     }
     
-    public int addItem(Item i)//0 means duplicate, 1 means successful
+    public void addItem(Item i)
     {
-        if(inventory.contains(i))
-            return 0;
-        else
-        {
-            inventory.add(i);
-            return 1;
-        }
+        inventory.add(i);
     }
     
     public boolean isInventoryEmpty()
@@ -40,31 +32,14 @@ public class Player
         currentHealth = h;
     }
     
-    public int decrementHealth() //0 means player is dead, 1 means they successfully lost health
+    public void decrementHealth(int x)
     {
-        if(currentHealth == 1)
-        {
-            currentHealth--;
-            return 0;
-        }
-        else
-        {
-            currentHealth--;
-            return 1;
-        }
+        currentHealth-=x;
     }
     
-    public int incrementHealth() //0 means player is at max health, 1 means they successfully gained health
+    public int incrementHealth(int x)
     {
-        if(currentHealth == maxHealth)
-        {
-            return 0;
-        }
-        else
-        {
-            currentHealth++;
-            return 1;
-        }
+        currentHealth+=x;
     }
     
     public int getCurrentHealth()
@@ -77,24 +52,19 @@ public class Player
         return maxHealth;
     }
     
-    public int getSpeed()
-    {
-        return speed;
-    }
-    
     public int getStrength()
     {
         return strength;
     }
-    
-    public void setSpeed(int s)
-    {
-        speed = s;
-    }
-    
+   
     public void setStrength(int s)
     {
         strength = s;
+    }
+    
+    public void increaseStrength(int s)
+    {
+        strength+=s;
     }
     
     public String toString()
