@@ -1,7 +1,5 @@
-public abstract class Item 
+public interface Item 
 {
-    //strength speed health
-    public abstract String getValue(); //return type of item
-    public abstract void use(); //what happens on use
-    public abstract String getName();//return name
+    public String getValue(); //name
+    public int getKey(); //int
 }
