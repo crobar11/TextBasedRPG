@@ -5,20 +5,17 @@ public class Potion extends Item
 {
     private String name;
     private int heal, strength, speed;
-    private ArrayList potions;
     
-    public Potion(String n, int h, int st)
+    public Potion(String n, int h, int st, int sp)
     {
         name = n;
         heal = h;
         strength = st;
+        speed = sp;
         
     }
     
-    public String getValue()
-    {
-        return "potion";
-    }
+
     
     public String getName()
     {
@@ -44,4 +41,5 @@ public class Potion extends Item
     {
         return speed;
     }
+    
 }
