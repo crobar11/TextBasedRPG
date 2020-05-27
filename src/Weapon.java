@@ -8,6 +8,7 @@ public class Weapon extends Item
         name = n;
         strength = s;
         accuracy = a;
+        
     }
     
     public void use()
@@ -25,4 +26,13 @@ public class Weapon extends Item
         return name;
     }
     
+    public int getAccuracy()
+    {
+        return accuracy;
+    }
+    
+    public String getValue()
+    {
+        return "weapon";
+    }
 }

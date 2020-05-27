@@ -34,9 +34,9 @@ public class ItemMap<Item> {
         list.add( (Item)new Potion("Medicine", 5, 0, 0));
         list.add( (Item)new Potion("Tonic", 0, 3, 20));
         list.add( (Item)new Potion("Antidote", 10, 0, 0));
-        list.add( (Item)new Potion("Smoke Ball", 0, 0, 50));
         list.add( (Item)new Potion("Ether", 2, 2, 10));
         list.add( (Item)new Potion("Elixir", 5, 5, 20));
+        list.add( (Item)new Potion("Basic Medicine", 3, 0, 0));
     }
     
     public Item get(int key)
@@ -47,9 +47,13 @@ public class ItemMap<Item> {
        {
            list.remove(key);
        }
-       
        return item;
         
+    }
+    
+    public Item returnRandom()
+    {
+        return get((int)(Math.random()*list.size()));
     }
     
     public Item remove(int key)

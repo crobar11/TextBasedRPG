@@ -14,9 +14,7 @@ public class Potion extends Item
         speed = sp;
         
     }
-    
 
-    
     public String getName()
     {
         return name;
@@ -41,5 +39,4 @@ public class Potion extends Item
     {
         return speed;
     }
-    
 }

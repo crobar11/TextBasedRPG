@@ -22,7 +22,7 @@ public class Encounter
               monsters.add(new Monster("dragon", 6, 15, 15));
                   monsters.add(new Monster("hag", 2, 10, 4));
                   monsters.add(new Monster("imp", 2, 40, 2));
-                  monsters.add(new Monster("ogre", 7, 5, 8));
+                  monsters.add(new Monster("ogre", 5, 5, 8));
            monsters.add(new Monster("elemental", 2, 20, 10));
               monsters.add(new Monster("serpent", 4, 30, 5));
                 monsters.add(new Monster("witch", 2, 40, 6));
@@ -50,6 +50,16 @@ public class Encounter
         return monsters.get(monsterTemp);
     }
     
+    public boolean isMonster()
+    {
+        return monster;
+    }
+    
+    public String getMonsterName()
+    {
+        return monsters.get(monsterTemp).getName();
+    }
+    
     public String flavorText()
     {
         String text = "";
@@ -58,7 +68,7 @@ public class Encounter
         if(monster == true)
             text =  "You are walking through a" + settings.get(setting) + " when you encounter a " + monsters.get(monsterTemp).getName();
         else
-            text =  "You are walking through a" + settings.get(setting) + "you do not encounter any monsters";
+            text =  "You are walking through a" + settings.get(setting) + " you do not encounter any monsters";
         return text;
     }
 }
