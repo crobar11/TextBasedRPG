@@ -11,11 +11,6 @@ public class Weapon extends Item
         
     }
     
-    public void use()
-    {
-        //attack
-    }
-    
     public int getStrength()
     {
         return strength;
