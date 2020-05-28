@@ -26,8 +26,4 @@ public class Weapon extends Item
         return accuracy;
     }
     
-    public String getValue()
-    {
-        return "weapon";
-    }
 }
