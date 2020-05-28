@@ -20,10 +20,6 @@ public class Potion extends Item
         return name;
     }
     
-    public void use()
-    {
-        
-    }
     
     public int getStrength()
     {
