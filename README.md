@@ -1,2 +1,2 @@
 # TextBasedRPG
-Text based RPG for computer science end of the year project
+Text based RPG for senior project during quarantine
